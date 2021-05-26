@@ -14,6 +14,5 @@ public class MarcoPageCount extends HttpServlet {
             count =0;
         }
         response.getWriter().println("<h1>You are the " + count + " visitor to the website<h1>");
-
     }
 }
