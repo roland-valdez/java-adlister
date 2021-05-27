@@ -4,8 +4,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "MarcoPageCount", urlPatterns = "/count")
-public class MarcoPageCount extends HttpServlet {
+@WebServlet(name = "PageCountServlet", urlPatterns = "/count")
+public class PageCountServlet extends HttpServlet {
     int count = 0;
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         count++;
