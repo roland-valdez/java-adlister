@@ -5,11 +5,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet (name = "guessGameWinServelet",  urlPatterns = "/correct")
-public class guessGameWinServelet extends HttpServlet{
+@WebServlet (name = "GuessingGameLostServlet", urlPatterns = "/incorrect")
+public class GuessingGameLostServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("outcome", "WON!");
+        request.setAttribute("outcome", "LOST!");
         request.getRequestDispatcher("/guessGameOutcome.jsp").forward(request, response);
+
     }
 }
-

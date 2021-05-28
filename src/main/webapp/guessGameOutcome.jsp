@@ -15,6 +15,6 @@
 
 <h3>Here are your results.</h3>
 <h2>You ${outcome}</h2>
-<h5>Your guess was 2 and the ${number} we were thinking about was ${random}.</h5>
+<h5>Your guess ${number} we were thinking about was ${random}.</h5>
 </body>
 </html>
