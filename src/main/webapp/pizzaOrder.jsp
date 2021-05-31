@@ -13,43 +13,48 @@
 <body>
 <main>
     <h1>Pizza Order Form</h1>
-    <form action="/PizzaOrder.jsp.jsp" method="POST">
-
-        <select>
-            <option selected>Select crust type</option>
-            <option value="thin">Thin Crust</option>
-            <option value="hand">Hand Tossed</option>
-            <option value="pan">Pan Pizza</option>
-        </select>
-        <select>
-            <option selected>Select sauce type</option>
-            <option value="marinara">Marinara</option>
-            <option value="alfredo">Alfredo</option>
-            <option value="spicy">Spicy Marinara</option>
-        </select>
-        <select>
-            <option selected>Select size</option>
-            <option value="personal">Personal</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-        </select>
-        <h5>Select Toppings</h5>
-        <div>
-            <label for="pepperoni">Pepperoni</label>
-            <input type="checkbox" id="pepperoni" value="pep" >
-        </div>
-        <div>
-            <label for="mushrooms">Mushrooms</label>
-            <input type="checkbox" id="mushrooms" value="mush" >
-        </div>
-        <div>
-            <label for="cheese">Cheese</label>
-            <input type="checkbox" id="cheese" value="chee" >
-        </div>
-        <label for="address" >Delivery Address:</label>
-        <input id="address" name="address" type="text">
-        <button type="submit">Place Order</button>
+    <form action="/pizzaOrder.jsp" method="POST">
+        <label for="number">Guess a Number</label>
+        <input id="number" name="number" type="text">
+        <button type="submit">Lock In Your Answer</button>
     </form>
+<%--    <form action="/pizzaOrder.jsp" method="POST">--%>
+
+<%--        <select name="crust">--%>
+<%--            <option selected>Select crust type</option>--%>
+<%--            <option value="thin">Thin Crust</option>--%>
+<%--            <option value="hand">Hand Tossed</option>--%>
+<%--            <option value="pan">Pan Pizza</option>--%>
+<%--        </select>--%>
+<%--        <select name="sauce">--%>
+<%--            <option selected>Select sauce type</option>--%>
+<%--            <option value="marinara">Marinara</option>--%>
+<%--            <option value="alfredo">Alfredo</option>--%>
+<%--            <option value="spicy">Spicy Marinara</option>--%>
+<%--        </select>--%>
+<%--        <select name="size">--%>
+<%--            <option selected>Select size</option>--%>
+<%--            <option value="personal">Personal</option>--%>
+<%--            <option value="medium">Medium</option>--%>
+<%--            <option value="large">Large</option>--%>
+<%--        </select>--%>
+<%--        <h5>Select Toppings</h5>--%>
+<%--        <div>--%>
+<%--            <label for="pepperoni">Pepperoni</label>--%>
+<%--            <input type="checkbox" id="pepperoni" name="pepperoni" value="pepperoni" >--%>
+<%--        </div>--%>
+<%--        <div>--%>
+<%--            <label for="mushrooms">Mushrooms</label>--%>
+<%--            <input type="checkbox" id="mushrooms" name="mushroom" value="mushroom" >--%>
+<%--        </div>--%>
+<%--        <div>--%>
+<%--            <label for="cheese">Cheese</label>--%>
+<%--            <input type="checkbox" id="cheese" name="cheese" value="cheese" >--%>
+<%--        </div>--%>
+<%--        <label for="address" >Delivery Address:</label>--%>
+<%--        <input id="address" name="address" type="text">--%>
+<%--        <button type="submit">Place Order</button>--%>
+<%--    </form>--%>
 </main>
 
 </body>
