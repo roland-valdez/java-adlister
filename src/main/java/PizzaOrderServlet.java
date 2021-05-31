@@ -8,12 +8,18 @@ import java.io.IOException;
 @WebServlet(name = "PizzaOrderServlet", urlPatterns = "/pizza-order")
 public class PizzaOrderServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("hello");
         request.getRequestDispatcher("/pizzaOrder.jsp").forward(request, response);
 
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-//        response.sendRedirect("/correct");
+        System.out.println(request.getParameter("crust"));
+        System.out.println(request.getParameter("sauce"));
+        System.out.println(request.getParameter("pepperoni"));
+        System.out.println(request.getParameter("mushrooms"));
+        System.out.println(request.getParameter("cheese"));
+        System.out.println(request.getParameter("address"));
+
+
     }
 }

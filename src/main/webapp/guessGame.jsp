@@ -13,7 +13,7 @@
 <body>
 <h1>Welcome to the Marco guessing game!</h1>
 <p>The rules are easy just type in a number and see if it matches our number.  Limit it to a whole number between 1 and 3.</p>
-<form action="/guessGame.jsp" method="POST">
+<form action="" method="POST">
     <label for="number">Guess a Number</label>
     <input id="number" name="number" type="text">
     <button type="submit">Lock In Your Answer</button>
