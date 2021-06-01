@@ -14,7 +14,7 @@
 <main>
     <h1>Pizza Order Form</h1>
 
-    <form action="" method="POST">
+    <form action="/pizza-order" method="POST">
         <select name="crust">
             <option selected>Select crust type</option>
             <option value="thin">Thin Crust</option>

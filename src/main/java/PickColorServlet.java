@@ -10,12 +10,4 @@ public class PickColorServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("/pickColor.jsp").forward(request, response);
     }
-
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("color", request.getParameter("color"));
-//        request.getRequestDispatcher("/viewColor").forward(request, response);
-        //        String color = request.getParameter("color");
-        response.sendRedirect("/viewcolor");
-
-    }
 }

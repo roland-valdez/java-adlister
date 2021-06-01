@@ -13,7 +13,7 @@
 <body>
 <main>
     <h1>What is your favorite color?</h1>
-    <form action="" method="POST">
+    <form action="/viewcolor" method="POST">
         <input id="color" name="color" type="text">
         <button type="submit">Submit</button>
     </form>
