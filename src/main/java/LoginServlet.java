@@ -9,29 +9,32 @@ import java.io.IOException;
 @WebServlet(name = "LoginServlet", urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/login.jsp").forward(request, response);
         HttpSession session = request.getSession();
-        String user = (String) session.getAttribute("user");
-
-        if(user.equals("true") ){
-            response.sendRedirect("/profile");
+        boolean userEmpty = session.getAttribute("user") == null;
+        if(userEmpty){
+            request.getRequestDispatcher("/login.jsp").forward(request, response);
+        }else {
+            request.getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);
         }
-
-
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String username = request.getParameter("username");
+        request.setAttribute("username", username);
         String password = request.getParameter("password");
         boolean validAttempt = username.equals("admin") && password.equals("password");
+        boolean validUser = !username.equals("") && !password.equals("");
+
 
         if (validAttempt) {
             HttpSession session = request.getSession();
             session.setAttribute("user", true);
             response.sendRedirect("/profile");
-        }else if (username != null && password != null){
+        }
+        else if (validUser){
             response.sendRedirect("/profile");
-        }else {
+        }
+        else {
             response.sendRedirect("/login");
         }
     }
