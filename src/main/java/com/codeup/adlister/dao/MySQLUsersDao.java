@@ -24,13 +24,15 @@ public class MySQLUsersDao implements Users{
     @Override
     public User findByUsername(String username) {
         try{
-        Statement stmt = null;
-        String sql = "SELECT * FROM users WHERE username LIKE '%" + username + "%'";
-        stmt = connection.createStatement();
-        ResultSet rs = stmt.executeQuery(sql);
-        return null;
+//        Statement stmt = null;
+        String sql = "SELECT * FROM users WHERE username LIKE ?";
+        String userSearch = "%" + username + "%";
+        PreparedStatement stmt = connection.prepareStatement(sql);
+        stmt.setString(1, userSearch);
+        ResultSet rs = stmt.executeQuery();
+        return (User) rs;
         } catch (SQLException e) {
-            throw new RuntimeException("Error retrieving all ads.", e);
+            throw new RuntimeException("Error finding username.", e);
         }
     }
 
@@ -49,7 +51,7 @@ public class MySQLUsersDao implements Users{
             rs.next();
             return rs.getLong(1);
         } catch (SQLException e) {
-            throw new RuntimeException("Error creating a new ad.", e);
+            throw new RuntimeException("Error creating a new user.", e);
         }
     }
 }
