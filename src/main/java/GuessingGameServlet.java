@@ -17,7 +17,7 @@ public class GuessingGameServlet extends HttpServlet{
         int userNumber = Integer.parseInt(userGuess);
 //        request.setAttribute("number", userNumber);
 //        request.setAttribute("random", randomNumber);
-        System.out.println("hello");
+//        System.out.println("hello");
         if (userNumber == randomNumber) {
             response.sendRedirect("/correct");
         } else {
