@@ -11,7 +11,7 @@ CREATE TABLE users(
 DROP TABLE IF EXISTS ads;
 CREATE TABLE ads(
                       id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-                      user_id INT UNSIGNED NOT NULL,
+                      user_id INT UNSIGNED,
                       title  VARCHAR(100) NOT NULL,
                       description VARCHAR(100) NOT NULL,
                       PRIMARY KEY (id),
