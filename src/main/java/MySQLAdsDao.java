@@ -7,22 +7,23 @@ public class MySQLAdsDao implements Ads{
     private Connection connection;
 //    private List<Ad> ads;
 
-//    public MySQLAdsDao (Config config) throws SQLException {
-//        this.connection = DriverManager.getConnection(
-//                config.getUrl(),
-//                config.getUser(),
-//                config.getPassword()
-//        );
-//    }
-public MySQLAdsDao() throws SQLException {
-
-            DriverManager.registerDriver(new Driver());
-        connection = DriverManager.getConnection(
-                "jdbc:mysql://localhost/adlister_db?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true",
-                "root",
-                "codeup"
+    public MySQLAdsDao (Config config) throws SQLException {
+        DriverManager.registerDriver(new Driver());
+        this.connection = DriverManager.getConnection(
+                config.getUrl(),
+                config.getUser(),
+                config.getPassword()
         );
-}
+    }
+//public MySQLAdsDao() throws SQLException {
+//
+//            DriverManager.registerDriver(new Driver());
+//        connection = DriverManager.getConnection(
+//                "jdbc:mysql://localhost/adlister_db?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true",
+//                "root",
+//                "codeup"
+//        );
+//}
     @Override
     public List<Ad> all()  {
 
