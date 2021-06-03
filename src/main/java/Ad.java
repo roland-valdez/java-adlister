@@ -17,6 +17,7 @@ public class Ad {
         this.description = description;
     }
 
+
     public long getId() {
         return id;
     }
